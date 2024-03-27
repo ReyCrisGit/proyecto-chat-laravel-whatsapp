@@ -37,7 +37,8 @@ class AccountController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $account = Account::find($id);
+        return view('accounts.view', ['account' => $account]);
     }
 
     /**
